@@ -876,7 +876,8 @@ function _pi_cleanNum(v) {
 }
 
 function _pi_parseRows(text) {
-  return text.trim().split(/?
+  return text.trim().split(/
+?
 /).map(function(line) {
     return line.split('	');
   }).filter(function(r){ return r.some(function(c){ return c.trim(); }); });
