@@ -924,7 +924,8 @@ function ctUpdatePOUnit(sel){
   }
 
   function piRows(text) {
-    return text.trim().split(/?
+    return text.trim().split(/
+?
 /).map(function(l){ return l.split('	'); })
                .filter(function(r){ return r.some(function(c){ return c.trim(); }); });
   }
