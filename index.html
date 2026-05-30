@@ -850,7 +850,7 @@ function ctSaleCalc() {
     var discount = discEl ? (+discEl.value || 0) : 0;
     var saleTotal = (sellP - discount) * qty;
     // Update the total display (try common IDs used by calcSale)
-    var totalEl = document.getElementById(a0_0x12f7eb(1039));
+  var totalEl = document.getElementById("f-total");
     if (totalEl) totalEl.textContent = fmt(saleTotal);
     // Update change
     var paidEl = document.getElementById("f-paid");
