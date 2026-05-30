@@ -940,7 +940,7 @@ function ctUpdatePOUnit(sel){
       Object.defineProperty(el, 'innerHTML', {
         set: function(v) {
           try { if (Array.isArray(window.inv))   window.inv.sort(DS); } catch(e){}
-          try { if (Array.isArray(window.sales)) window.sales.sort(DS); } catch(e){}
+          window.sales.sort((a,b)=>new Date(b.date)-new Date(a.date));
           try { if (Array.isArray(window.exp))   window.exp.sort(DS); } catch(e){}
           desc.set.call(this, v);
         },
