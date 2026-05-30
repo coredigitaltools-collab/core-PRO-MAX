@@ -830,15 +830,14 @@ function ctSaleCalc() {
 
   // Update hint
   var hint = document.getElementById("ct-sale-pieces-hint");
-  if (hint) {
-    if (unit !== "pieces" && total > 0) {
-      hint.style.display = "";
-      hint.textContent = "= " + fmtN(total) + " pieces deducted from stock";
-    } else {
-      hint.style.display = "none";
-    }
+ if (hint) {
+  if (total > 0) {
+    hint.style.display = "";
+    hint.textContent = "= " + fmtN(qty) + " " + unit + " deducted from stock";
+  } else {
+    hint.style.display = "none";
   }
-
+}
   if (unit === "pieces") {
     // Pieces: let the original calcSale() handle everything (per-piece logic)
     calcSale();
