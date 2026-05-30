@@ -705,7 +705,7 @@ async function addSale() {
       var qtySoldPieces = Math.round(qtyInUnit * piecesPerUnit);
 
       var currentStock = getCurrentStock(product);
-      if (qtySoldPieces > currentStock && currentStock >= 0) {
+      if (qtyInUnit > currentStock && currentStock >= 0) {
         return showToast(e(857) + currentStock + e(1097), e(447));
       }
 
