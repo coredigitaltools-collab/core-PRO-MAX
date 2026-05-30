@@ -1153,9 +1153,9 @@ function ctUpdatePOUnit(sel){
   window._setSalesSort = function(dir) {
     window._salesSortDir = dir;
     if (Array.isArray(window.sales)) {
-      window.sales.sort(function(a, b) {
-        return dir === 'asc' ? (a.date||'').localeCompare(b.date||'') : (b.date||'').localeCompare(a.date||'');
-      });
+     window.sales.sort(function(a, b) {
+  return new Date(b.date) - new Date(a.date);
+});
     }
     try { render(); } catch(e) {}
   };
