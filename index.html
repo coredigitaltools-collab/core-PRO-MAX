@@ -602,6 +602,7 @@ function ctUpdateUnitFields() {
   var qtyLabel = document.getElementById("ct-qty-label");
   var buyLabel = document.getElementById("ct-buy-label");
   var sellLabel = document.getElementById("ct-sell-label");
+  console.log("Selected unit:", unit);
   if (unit === "bales") {
     convWrap.style.display = "";
     convLabel.textContent = "Pieces per Bale";
