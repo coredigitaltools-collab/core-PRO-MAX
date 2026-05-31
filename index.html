@@ -621,8 +621,9 @@ function ctUpdateUnitFields() {
   } else {
     convWrap.style.display = "none";
     qtyLabel.textContent = "Quantity Purchased";
-    if (buyLabel) buyLabel.textContent = "Buying Price (per piece)";
-    if (sellLabel) sellLabel.textContent = "Selling Price (per piece)";
+    var unitName = (unit === "boxes") ? "box" : unit.slice(0,-1);
+if (buyLabel) buyLabel.textContent = "Buying Price (per " + unitName + ")";
+if (sellLabel) sellLabel.textContent = "Selling Price (per " + unitName + ")";
     document.getElementById("f-conv").readOnly = false;
   }
   ctCalcPieces();
@@ -694,7 +695,7 @@ async function addSale() {
     '<div class="form-group"><label>Amount Paid (optional)</label><input id="f-paid" type="number" placeholder="0" oninput="calcChange()"></div>\n' +
     '<div class="form-group"><label>Change</label><div class="calc-display" id="f-change">—</div></div>\n' +
     '</div>\n' +
-    // Pieces equivalent indicator
+   // Stock deduction indicator
     '<div class="form-hint" id="ct-sale-pieces-hint" style="display:none"></div>\n',
     async function() {
       var e = t;
