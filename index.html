@@ -1008,9 +1008,10 @@ function ctUpdatePOUnit(sel){
 
   window.openPasteImport = function(type) {
     var titles = {inv:'Paste Import — Inventory', sales:'Paste Import — Sales', exp:'Paste Import — Expenses'};
-    var html = '<div style="font-size:12px;color:var(--text2);margin-bottom:8px">Copy rows from Excel or Google Sheets (including header row) and paste below.</div>'
-      +'<textarea id="_pi_ta" style="width:100%;height:160px;background:var(--surface2);border:1px solid var(--border2);color:var(--text);border-radius:8px;padding:10px;font-size:12px;font-family:monospace;outline:none" placeholder="Paste data here..." oninput="document.getElementById('_pi_hint').textContent=(this.value.trim().split(/\r?\n/).length-1)+' row(s) detected'"></textarea>'
-      +'<div id="_pi_hint" style="margin-top:6px;font-size:12px;color:var(--accent3)"></div>';
+  var html =
+    '<div style="font-size:12px;color:var(--text2);margin-bottom:8px">Copy rows from Excel or Google Sheets (including header row) and paste below.</div>' +
+    '<textarea id="_pi_ta" style="width:100%;height:160px;background:var(--surface2);border:1px solid var(--border2);color:var(--text);padding:8px"></textarea>' +
+    '<div id="_pi_hint" style="margin-top:6px;font-size:12px;color:var(--accent3)"></div>';
     openModal(titles[type]||'Paste Import', html, function(){ window.piDoImport(type); });
   };
 
