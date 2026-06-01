@@ -815,7 +815,7 @@ function ctUpdateSaleUnit() {
 function ctSaleCalc() {
   var saleUnitEl = document.getElementById("f-sale-unit");
   if (!saleUnitEl) { calcSale(); return; } // original modal — let original handle it
-var unit = getUnitLower() || "pieces";
+var unit = saleUnitEl.value || "pieces";
   var qty = +(document.getElementById("f-qty") || {}).value || 0;
   var convEl = document.getElementById("f-sale-conv");
   var conv = convEl ? (+convEl.value || 1) : 1;
