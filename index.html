@@ -662,13 +662,7 @@ async function addSale() {
     t(1299) +
     (products.length ? "" : t(509)) +
     // — Sale Unit selector —
-    '<div class="form-row">\n' +
-    '<div class="form-group"><label>Sale Unit</label>' +
-    '<select id="f-sale-unit" onchange="ctUpdateSaleUnit()">' +
-    '<option value="pieces">Pieces</option>' +
-    '<option value="dozens">Dozens</option>' +
-    '<option value="bales">Bales</option>' +
-    '</select></div>\n' +
+   '<input type="hidden" id="f-sale-unit" value="pieces">\n' +
     // — Conversion for bales only —
     '<div class="form-group" id="ct-sale-conv-wrap" style="display:none"><label id="ct-sale-conv-label">Pieces per Bale</label>' +
     '<input id="f-sale-conv" type="number" min="1" placeholder="e.g. 144" oninput="ctSaleCalc()"></div>' +
