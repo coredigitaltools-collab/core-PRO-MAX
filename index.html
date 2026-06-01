@@ -662,7 +662,7 @@ async function addSale() {
     t(1299) +
     (products.length ? "" : t(509)) +
     // — Sale Unit selector —
-  '<input type="hidden" id="f-sale-unit" value="' + getUnitLower() + '">\n' +
+'<input type="hidden" id="f-sale-unit" value="pieces">\n' +
     // — Conversion for bales only —
     '<div class="form-group" id="ct-sale-conv-wrap" style="display:none"><label id="ct-sale-conv-label">Pieces per Bale</label>' +
     '<input id="f-sale-conv" type="number" min="1" placeholder="e.g. 144" oninput="ctSaleCalc()"></div>' +
