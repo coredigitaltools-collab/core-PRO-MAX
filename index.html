@@ -833,7 +833,7 @@ function ctSaleCalc() {
  if (hint) {
   if (total > 0) {
     hint.style.display = "";
-    hint.textContent = "= " + fmtN(qty) + " " + getUnitLower() + " deducted from stock";
+  hint.textContent = "= " + fmtN(qty) + " " + unit + " deducted from stock"; 
   } else {
     hint.style.display = "none";
   }
