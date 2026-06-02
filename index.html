@@ -1559,9 +1559,9 @@ renderAnnual = function() {
     if ((s > 0 || e > 0) && Math.abs(c) > 0.01) {
       var wrongFmt = wrongP >= 0 ? fmt(wrongP) : "-" + fmt(Math.abs(wrongP));
       var correctFmt = correctP >= 0 ? fmt(correctP) : "-" + fmt(Math.abs(correctP));
-      if (wrongFmt !== correctFmt) {
-        html = html.replace(wrongFmt, correctFmt);
-      }
+     if (wrongFmt !== correctFmt && wrongP !== s) {
+    html = html.replace(wrongFmt, correctFmt);
+}
     }
   }
   // Fix annual totals
