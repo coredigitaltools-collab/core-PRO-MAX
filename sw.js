@@ -1,4 +1,4 @@
-const CACHE = 'traxxo-v1';
+const CACHE = 'traxxo-v2';
 const ASSETS = ['./'];
 
 self.addEventListener('install', e => {
